@@ -60,7 +60,7 @@ python run_ssd_example.py <model-type> <path to checkpoint.pth> <path to labels.
 ```
 Please check other arguments for further options
 
-![alt text]("run_ssd_example_output.jpg")
+![alt text]("https://github.com/Ka0Ri/facemask-detection/run_ssd_example_output.jpg")
 
 **Step 4**: jetson nano inference
 ```
