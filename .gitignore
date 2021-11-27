@@ -129,8 +129,7 @@ dmypy.json
 .pyre/
 
 #jetson code
-jetson-inference
-pytorch-detection
+
 
 #dataset
 dataset
