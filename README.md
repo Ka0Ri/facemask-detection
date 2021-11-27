@@ -67,7 +67,7 @@ Please check other arguments for further options
 python mask-detection --model=<path to ckpt.onnx> --labels=<path to labels.txt> --input-blob=input_0 --output-cvg=scores --output-bbox=boxes <camera ,e.g: /dev/video0>
 ```
 
-![alt text](jetson-run-demo.gif)
+![alt text](jetson-run-demo1.gif)
 ## References
 https://github.com/dusty-nv/jetson-inference/blob/dev/docs/pytorch-ssd.md
 
