@@ -66,7 +66,7 @@ while True:
 	imgOutput = jetson.utils.cudaAllocMapped(width=640, height=480, format=img.format)
 	jetson.utils.cudaResize(img, imgOutput) #reduce resolution for smoother
 	# detect objects in the image (with overlay)
-	detections = net.Detect(img, overlay=opt.overlay)
+	detections = net.Detect(imgOutput, overlay=opt.overlay)
 
 	# print the detections
 	print("detected {:d} objects in image".format(len(detections)))
