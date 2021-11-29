@@ -63,7 +63,8 @@ input = jetson.utils.videoSource(opt.input_URI, argv=sys.argv)
 while True:
 	# capture the next image
 	img = input.Capture()
-
+	imgOutput = jetson.utils.cudaAllocMapped(width=640, height=480, format=img.format)
+	jetson.utils.cudaResize(img, imgOutput) #reduce resolution for smoother
 	# detect objects in the image (with overlay)
 	detections = net.Detect(img, overlay=opt.overlay)
 
@@ -74,7 +75,7 @@ while True:
 		print(detection)
 
 	# render the image
-	output.Render(img)
+	output.Render(imgOutput)
 
 	# update the title bar
 	output.SetStatus("{:s} | Network {:.0f} FPS".format(opt.network, net.GetNetworkFPS()))
